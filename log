@@ -20,3 +20,15 @@ list.c:55:8: note: previous definition of ‘lastList’ with type ‘void *(Lis
       |        ^~~~~~~~
 Compilation failed
 ad84ddd
+Thu 24 Aug 2023 09:00:47 PM UTC: 
+ list.c | 4 ----
+ 1 file changed, 4 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccWfnqzE.o: in function `cleanList':
+test.c:(.text+0x1f4): undefined reference to `popFront'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccWfnqzE.o: in function `test_last_prev':
+test.c:(.text+0x4bf): undefined reference to `prevList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x577): undefined reference to `prevList'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x5dc): undefined reference to `prevList'
+collect2: error: ld returned 1 exit status
+Compilation failed
+79a4792
