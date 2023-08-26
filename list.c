@@ -110,7 +110,7 @@ void * popFront(List * list) {
     }
 
     void * data = list->head->data;
-    Node * nodeToRemove = list->head;
+    Node * nodeRemove = list->head;
 
     list->head = list->head->next;
     if (list->head != NULL) {
@@ -119,11 +119,11 @@ void * popFront(List * list) {
         list->tail = NULL;
     }
 
-    if (list->current == nodeToRemove) {
+    if (list->current == nodeRemove) {
         list->current = NULL;
     }
 
-    free(nodeToRemove);
+    free(nodeRemove);
     return data;
 }
 
@@ -133,7 +133,7 @@ void * popBack(List * list) {
     }
 
     void * data = list->tail->data;
-    Node * nodeToRemove = list->tail;
+    Node * nodeRemove = list->tail;
 
     list->tail = list->tail->prev;
     if (list->tail != NULL) {
@@ -142,11 +142,11 @@ void * popBack(List * list) {
         list->head = NULL;
     }
 
-    if (list->current == nodeToRemove) {
+    if (list->current == nodeRemove) {
         list->current = NULL;
     }
 
-    free(nodeToRemove);
+    free(nodeRemove);
     return data;
 }
 
@@ -156,7 +156,7 @@ void * popCurrent(List * list) {
     }
 
     void * data = list->current->data;
-    Node * nodeToRemove = list->current;
+    Node * nodeRemove = list->current;
 
     if (list->current->prev != NULL) {
         list->current->prev->next = list->current->next;
@@ -171,7 +171,7 @@ void * popCurrent(List * list) {
     }
 
     list->current = list->current->next;
-    free(nodeToRemove);
+    free(nodeRemove);
     return data;
 }
 
