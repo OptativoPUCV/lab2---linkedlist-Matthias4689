@@ -32,3 +32,9 @@ test.c:(.text+0x4bf): undefined reference to `prevList'
 collect2: error: ld returned 1 exit status
 Compilation failed
 79a4792
+Sat 26 Aug 2023 03:22:19 AM UTC: 
+ list.c | 54 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 54 insertions(+)
+ tests:  12|0
+total_score: 70/70
+f74855a
